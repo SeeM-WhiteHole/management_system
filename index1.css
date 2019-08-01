@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    width:100%;
+    height:100%;
+}
+body{
+    text-align: center;
+}
+#windowBox{
+    width:100%;
+    height:100%;
+    background-color: lightgray;
+}
+#headerBox{
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+#headerBox div{
+    position: absolute;
+    top:5%;
+    left: 78%;
+    color: white;
+    font-size: 30px;
+}
+#headerBox div span{
+    font-size: 30px;
+    color: white;
+}
+#headerBox > span{
+    position: absolute;
+    left: 4%;
+    font-size: 50px;
+    color: white;
+}
+#leftList{
+    position: relative;
+    top: 1%;
+    width: 300px;
+    height: 859px;
+    background-color: black;
+}
+#listOne,#listTwo{
+    width: 100%;
+    height: 70px;
+    color: white;
+    display: table;
+}
+#listOne span{
+    font-size: 35px;
+    display: table-cell;
+    vertical-align: middle;
+}
+#leftList ul{
+    background-color: black;
+    color: white;
+    display: none;
+}
+#leftList ul li{
+    display: table;
+    width: 100%;
+    height: 50px;
+}
+#leftList ul li span{
+    display: table-cell;
+    font-size: 20px;
+    vertical-align: middle;
+}
+#nodeTable{
+    height:850px;
+    width: 1600px;
+    position: absolute;
+    top: 110px;
+    left:310px;
+    background-color: lightgray;
+}
+#listOne:hover{
+    background-color: gray;
+}
+#leftList ul li:hover{
+    background-color: gray;
+}
+#tableList{
+    position: absolute;
+    left: 1%;
+    top: 1%;
+    visibility: hidden;
+}
+#tableList caption{
+    font-size: 25px;
+}
+#classList{
+    position: absolute;
+    left: 1%;
+    top: 1%;
+    visibility: hidden;
+}
+#classList caption{
+    font-size: 25px;
+}
+#cCBtn{
+    position: absolute;
+    left: 40%;
+    top: 1%;
+    width: 60px;
+    height: 30px;
+    font-size: 15px;
+    visibility: hidden;
+}
+#chooseClass{
+    position: absolute;
+    left: 50%;
+    top: 1%;
+    visibility: hidden;
+}
+#chooseClass caption{
+    font-size: 25px;
+}
+#sGradeList{
+    position: absolute;
+    left: 1%;
+    top: 1%;
+    visibility: hidden;
+}
+#sGradeList caption{
+    font-size: 25px;
+}
+#gradeWarning{
+    position: absolute;
+    top: 5%;
+    left:45%;
+    font-size: 20px;
+    color: red;
+    visibility: hidden;
+}
+#classWarning{
+    position: absolute;
+    top: 2%;
+    left:50%;
+    font-size: 20px;
+    color: red;
+    visibility: hidden;
+}

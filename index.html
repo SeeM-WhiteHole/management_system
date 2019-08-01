@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>教师版</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="service/ajax.js"></script>
+</head>
+<body>
+<div id="windowBox">
+    <div id="headerBox">
+        <span>教 务 管 理 系 统</span>
+        <div>欢迎：<span id="username"></span>老师</div>
+    </div>
+    <div id="leftList">
+        <div id="listOne"><span>学生基本信息</span></div>
+        <ul id="ulOne">
+            <li class="sInfo"><span>学生基本信息表</span></li>
+            <li class="sInfo"><span>学生信息录入</span></li>
+            <li class="sInfo"><span>学生信息修改</span></li>
+        </ul>
+        <div id="listTwo"><span>学生选课信息</span></div>
+        <ul id="ulTwo">
+            <li class="cInfo"><span>课程录入</span></li>
+            <li class="cInfo"><span>课程修改</span></li>
+            <li class="cInfo"><span>成绩录入</span></li>
+        </ul>
+    </div>
+    <div id="nodeTable">
+        <table border="1" cellspacing="0" width="700" id="tableList">
+            <caption>学生基本信息</caption>
+            <thead>
+            <tr>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>性别</th>
+                <th>班级</th>
+                <th>院系</th>
+                <th>学号</th>
+                <th>密码</th>
+            </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+        <table border="1" cellspacing="0" width="700" id="classList">
+            <caption>课程基本信息</caption>
+            <thead>
+            <tr>
+                <th>课程编号</th>
+                <th>课程名</th>
+                <th>任课老师</th>
+                <th>学分</th>
+            </tr>
+            </thead>
+            <tbody id="tbodyClass"></tbody>
+        </table>
+        <table border="1" cellspacing="0" width="700" id="gradeList">
+            <caption>学生成绩信息表</caption>
+            <thead>
+                <tr>
+                    <th>学号</th>
+                    <th>课程编号</th>
+                    <th>成绩</th>
+                </tr>
+            </thead>
+            <tbody id="tbodyGrade"></tbody>
+        </table>
+        <div id="inputSinfo">
+            <caption>学 生 信 息 录 入</caption><br>
+            姓名:<input type="text" id="sname" placeholder="输入学生姓名"><br>
+            年龄:<input type="text" id="sage" placeholder="输入学生年龄"><br>
+            性别:<input type="text" id="sex" placeholder="输入学生性别"><br>
+            班级:<input type="text" id="sclass" placeholder="输入学生班级"><br>
+            院系:<input type="text" id="sdept" placeholder="输入学生院系"><br>
+            学号:<input type="text" id="sno" placeholder="输入学生学号"><br>
+            密码:<input type="text" id="spwd" placeholder="输入学生登录密码"><br>
+            <button id="inputSinfoBtn">提交</button>
+        </div>
+        <div id="modifySinfo">
+            <caption>学 生 信 息 修 改</caption>
+            <br>
+            <input type="text" id="mSno" placeholder="需要修改信息的学生学号"><br>
+            <select id="modifyList">
+                <option value="sname">学 生 姓 名</option>
+                <option value="sage">学 生 年 龄</option>
+                <option value="ssex">学 生 性 别</option>
+                <option value="class">学 生 班 级</option>
+                <option value="dept">学 生 院 系</option>
+                <option value="spwd">登 录 密 码</option>
+            </select>
+            <br>
+            <input type="text" id="modifyText" placeholder="需要修改的内容">
+            <br>
+            <button id="modifySinfoBtn">提交</button>
+        </div>
+        <div id="inputClass">
+            <caption>课 程 信 息 录 入</caption><br>
+            课程编号:<input type="text" id="cno" placeholder="输入课程编号"><br>
+            科目名称:<input type="text" id="cname" placeholder="输入科目名称"><br>
+            任科教师:<input type="text" id="cth" placeholder="输入任科教师"><br>
+            科目学分:<input type="text" id="credit" placeholder="输入科目学分"><br>
+            <button id="inputCinfoBtn">提交</button>
+        </div>
+        <div id="modifyCinfo">
+            <caption>课 程 信 息 修 改</caption>
+            <br>
+            <input type="text" id="mCno" placeholder="需要修改信息的课程编号"><br>
+            <select id="modifyCList">
+                <option value="cname">课 程 名</option>
+                <option value="cth">任 课 老 师</option>
+                <option value="credit">学 分</option>
+            </select>
+            <br>
+            <input type="text" id="modifyCText" placeholder="需要修改的内容">
+            <br>
+            <button id="modifyCinfoBtn">提交</button>
+        </div>
+        <div id="inputGrade">
+            <caption>学 生 成 绩 录 入</caption>
+            <br>
+            <input type="text" id="gSno" placeholder="录入成绩的学生学号"><br>
+            <input type="text" id="gCno" placeholder="录入成绩的课程编号"><br>
+            <input type="text" id="gGrade" placeholder="录入的成绩">
+            <br>
+            <button id="inputGradeBtn">提交</button>
+        </div>
+    </div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>

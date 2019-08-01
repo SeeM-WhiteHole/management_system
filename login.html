@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="login.css">
+    <script src="service/ajax.js"></script>
+    <title>登录</title>
+</head>
+<body>
+    <div id="windowBox">
+        <p>教务系统登录</p>
+        <div id="loginBox">
+            <div>
+                <span>用户名:</span>
+                <input type="text" id="username" placeholder="请输入用户名">
+            </div>
+            <div>
+                <span>密&nbsp&nbsp&nbsp码:</span>
+                <input type="password" id="userpwd" placeholder="请输入密码" >
+            </div>
+            <div id="loginBtns">
+                教师<input type="radio" name="identity" id="teacherRadio" checked>
+                学生<input type="radio" name="identity" id="studentRadio">
+                <button onclick="submit()">登录</button>
+            </div>
+        </div>
+    </div>
+</body>
+    <script>
+        function submit() {
+            var teacherRadio = document.getElementById('teacherRadio');
+            var studentRadio = document.getElementById('studentRadio');
+            var username = document.getElementById('username').value;
+            var userpwd = document.getElementById('userpwd').value;
+            if ( teacherRadio.checked == false && studentRadio.checked == false ){
+                alert("请选择登录身份");
+            }
+            if ( teacherRadio.checked == true ){
+                ajax('http://127.0.0.1:9826',username,userpwd,'teacher','login');
+            }
+            if ( studentRadio.checked == true ){
+                ajax('http://127.0.0.1:9826',username,userpwd,'student','login');
+            }
+        }
+    </script>
+</html>
